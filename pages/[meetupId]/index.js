@@ -38,7 +38,7 @@ export async function getStaticPaths() {
   // linia z findem oznacza że wyciagamy wszystkie dokumenty z kolekcji ('{}'), a w drugim argumencie finda
   // ('{_id: 1}') mowimy ze wyciagamy TYLKO id dla kazdego dokumentu
   return {
-    fallback: false, // false => jesli nie bedzie zadnego patha (m1/m2) w url to wyskoczy error 404
+    fallback: "blocking", // false => jesli nie bedzie zadnego patha (m1/m2) w url to wyskoczy error 404
     // fallback: true => nextjs bedzie czekal na incoming requesty i bedzie probowac zrenderowc strone
     paths: meetups.map((meetup) => ({
       // dynamic paths do pre -renderingu
